@@ -57,7 +57,7 @@ Los comandos se ejecutan desde la raíz del proyecto.
 
 ## Pruebas
 
-Vídeos de pruebas reales contra la API de OpenAI, grabados con una herramienta automática de navegador. Al primero le falta el principio, porque la grabación está limitada a 50 fotogramas.
+Vídeos de pruebas reales contra la API de OpenAI, grabados con una herramienta automática de navegador.
 
 - [Consultas sobre envíos, devoluciones y horario](demo/chatbot_1_consultas.mp4)
 - [Preguntas sin información disponible, incluida «¿Dónde está mi pedido?»](demo/chatbot_2_no_inventar.mp4)
