@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light dark;
+  --background: #f4f4f5;
+  --panel: #ffffff;
+  --text: #18181b;
+  --border: #d4d4d8;
+  --bot: #e4e4e7;
+  --user: #1d4ed8;
+  --user-text: #ffffff;
+  --error: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #18181b;
+    --panel: #27272a;
+    --text: #f4f4f5;
+    --border: #3f3f46;
+    --bot: #3f3f46;
+    --error: #fca5a5;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  height: 100dvh;
+  margin: 0 auto;
+  background: var(--panel);
+}
+
+.header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--user);
+  color: var(--user-text);
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: var(--bot);
+}
+
+.message.error {
+  align-self: flex-start;
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.form button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--user);
+  color: var(--user-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
